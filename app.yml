@@ -1,0 +1,29 @@
+#Manifest 
+default_events:
+  - create
+  - issues
+  - pull_request
+  - pull_request_review
+  - pull_request_review_comment
+
+default_permissions:
+  checks: read
+  contents: read
+  issues: write
+  metadata: read
+  pull_requests: read
+  repository_hooks: read
+  repository_projects: read
+  statuses: read
+
+name: WIPCream
+
+# The homepage of your GitHub App.
+# url: https://example.com/
+
+# A description of the GitHub App.
+description: Work in progress management application for Github pull requests
+
+# Set to true when your GitHub App is available to the public or false when it is only accessible to the owner of the app.
+# Default: true
+public: false

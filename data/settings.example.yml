@@ -1,0 +1,12 @@
+##############################################################################
+#                     CONFIGURATION YML FOR BOT SETTINGS
+#############################################################################
+
+# Max number of pull requests that can be in review at any given time
+pull_request_limit: 10
+
+# Reply the bot will leave when a PR is in violation of the ruleset
+comment_reply: "Default comment reply"
+
+# Prefix to look for to make PRs exempt of the ruleset
+preset_exemption: "PROJECT-127"
