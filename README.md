@@ -1,6 +1,5 @@
 # WIPCream
-
-> A GitHub App built with [Probot](https://github.com/probot/probot) that A github work in progress management bot
+> A Github bot that helps limit the number of pull requests that are open to promote closing completed tickets and tickets in review.
 
 ## Setup
 
