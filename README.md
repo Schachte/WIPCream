@@ -19,7 +19,7 @@ preset_exemption: "PROJECT-127"
 
 Configuration is stored via a YML file and that acts as the applications data layer. (This is temporary). File reads/writes continue as the settings are changed and that's what is used to cross-reference github data as events occur within the repository. Inside the `data/` directory, this `.yml` file is read and the keys are immutable and case-sesitive. 
 
-If you happen to run the file, you can run a `node` script from the `util` directory to revert back to defaults
+If you happen to ruin the file, you can run a `node` script from the `util` directory to revert back to defaults
 
 ## Setup
 
