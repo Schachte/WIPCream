@@ -1,4 +1,5 @@
 const RequestHandler = require("./lib/requestHandler");
+const Server = require("./api/server");
 
 const eventSubscriptions = ["pull_request.opened", "pull_request.reopened"];
 
