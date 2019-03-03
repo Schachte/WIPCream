@@ -1,4 +1,4 @@
-# WIPCream
+# 🍦WIPCream
 > A Github bot that helps limit the number of pull requests that are open to promote closing completed tickets and tickets in review.
 
 ## How Configuration Works
