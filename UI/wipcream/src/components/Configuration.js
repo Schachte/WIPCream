@@ -6,8 +6,8 @@ import Editor from "./Editor";
 const Configuration = () => {
   return (
     <React.Fragment>
-      <div class="row">
-        <h1 class="ui huge header">Configuration</h1>
+      <div className="row">
+        <h1 className="ui huge header">Configuration</h1>
       </div>
       <SettingsBlock
         header={"Settings"}

@@ -3,13 +3,20 @@ const app = express();
 const bodyParser = require("body-parser");
 const DataUtil = require("../lib/dataUtil");
 const dataUtil = new DataUtil();
-const cors = require('cors')
+const cors = require("cors");
+const axios = require("axios");
+const url = require("url");
 
-const port = 1337;
+require("dotenv").config();
+
+const envir = require("./environment");
+const Environment = new envir();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(cors())
+app.use(cors());
+
+const port = 1337;
 
 // Routes
 app.get("/config", (req, res) => res.send(dataUtil.readConfigFile()));
@@ -33,5 +40,29 @@ app.post("/config", async (req, res) => {
   res.send(dataUtil.readConfigFile());
 });
 
-// // HTTP
+app.get("/login", async (req, res) => {
+  // Get the identity token from GitHub origin
+  return await axios
+    .post("https://github.com/login/oauth/access_token", {
+      code: req.query.code,
+      client_id: process.env.CLIENT_ID,
+      client_secret: process.env.CLIENT_SECRET
+    })
+    .then(async resp => {
+      let data = await url.parse("http://parse.com?" + resp.data, {
+        parseQueryString: true
+      }).query;
+
+      res.redirect(
+        url.format({
+          pathname: Environment.getUrl(),
+          query: {
+            token: data.access_token
+          }
+        })
+      );
+    });
+});
+
+// HTTP
 app.listen(port, () => console.log(`WIPCream listening on port ${port}!`));

@@ -23,16 +23,18 @@ export default class FluidForm extends React.Component {
 
   persistData = e => {
     e.preventDefault();
-    axios.post(`http://localhost:1337/config`, {
-      pull_request_limit: this.state.limit,
-      preset_exemption: this.state.presetExemption
-    });
+    axios
+      .post(`http://localhost:1337/config`, {
+        pull_request_limit: this.state.limit,
+        preset_exemption: this.state.presetExemption
+      })
+      .then(data => alert("Settings Saved"));
   };
 
   render() {
     return (
-      <form class="ui form attached fluid segment">
-        <div class="field">
+      <form className="ui form attached fluid segment">
+        <div className="field">
           <label>
             Exemption Prefixes (PRs pre-fixes that the bot will ignore)
           </label>
@@ -43,7 +45,7 @@ export default class FluidForm extends React.Component {
             type="text"
           />
         </div>
-        <div class="field">
+        <div className="field">
           <label>Max Number of Open Pull Requests Allowed</label>
           <input
             value={this.state.limit}
@@ -52,7 +54,10 @@ export default class FluidForm extends React.Component {
             type="text"
           />
         </div>
-        <div class="ui blue submit button" onClick={e => this.persistData(e)}>
+        <div
+          className="ui blue submit button"
+          onClick={e => this.persistData(e)}
+        >
           Save Settings
         </div>
       </form>

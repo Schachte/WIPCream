@@ -20,8 +20,10 @@
     "test:watch": "jest --watch --notify --notifyMode=change --coverage"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
+    "dotenv": "^6.2.0",
     "esm": "^3.2.9",
     "express": "^4.16.4",
     "js-yaml": "^3.12.2",

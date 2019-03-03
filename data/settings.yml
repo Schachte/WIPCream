@@ -1,3 +1,19 @@
-pull_request_limit: '1000'
-comment_reply: '**same # u**'
-preset_exemption: PROJEC4T-127
+pull_request_limit: '0'
+comment_reply: >
+  ## Demo Video
+
+
+  ```
+
+  You are receiving this message because there are too many open pull requests
+  open on this repository. 
+
+  In an effort to reduce the amount of open pull requests and WIP (work in
+  progress), we are closing this pull request.
+
+  ```
+
+
+  *You can view open pull requests here:
+  https://github.com/Schachte/WIPCream/Issues*
+preset_exemption: GSR-123
