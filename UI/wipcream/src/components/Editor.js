@@ -22,13 +22,14 @@ export default class Editor extends React.Component {
   handleValueChange = value => {
     this.setState({ value });
   };
+
   handleTabChange = tab => {
     this.setState({ tab });
   };
 
   render() {
     return (
-      <div className="container">
+      <div className="container" style={{ width: "100%" }}>
         <ReactMde
           onChange={this.handleValueChange}
           value={this.state.value}
