@@ -2,27 +2,24 @@ import React from "react";
 
 export default class SettingsBlock extends React.Component {
   state = {};
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (
       <React.Fragment>
-        <div class="row">
-          <h2 class="ui header">{this.props.header}</h2>
+        <div className="row">
+          <h2 className="ui header">{this.props.header}</h2>
         </div>
-        <div class="ui divider" />
-        <div class="row">
-          <div class="ui icon message">
-            <i class={`${this.props.tooltipLogo} icon`} />
-            <div class="content">
-              <div class="header">{this.props.tooltipTitle}</div>
+        <div className="ui divider" />
+        <div className="row">
+          <div className="ui icon message">
+            <i className={`${this.props.tooltipLogo} icon`} />
+            <div className="content">
+              <div className="header">{this.props.tooltipTitle}</div>
               <p>{this.props.description}</p>
             </div>
           </div>
         </div>
-        <div class="row">{this.props.rowComponent}</div>
+        <div className="row">{this.props.rowComponent}</div>
       </React.Fragment>
     );
   }

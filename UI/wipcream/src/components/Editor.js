@@ -59,7 +59,7 @@ export default class Editor extends React.Component {
           onTabChange={this.handleTabChange}
         />
         <div
-          class="ui blue submit button"
+          className="ui blue submit button"
           style={{ marginTop: "10px" }}
           onClick={e => this.persistData(e)}
         >
