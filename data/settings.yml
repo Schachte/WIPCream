@@ -1,9 +1,6 @@
 pull_request_limit: '0'
 comment_reply: >
-  ## Demo Video
-
-
-  ```
+  ## ⚠️ THIS PR HAS BEEN CLOSED  ⚠️
 
   You are receiving this message because there are too many open pull requests
   open on this repository. 
@@ -11,9 +8,7 @@ comment_reply: >
   In an effort to reduce the amount of open pull requests and WIP (work in
   progress), we are closing this pull request.
 
-  ```
-
 
   *You can view open pull requests here:
-  https://github.com/Schachte/WIPCream/Issues*
-preset_exemption: GSR-123
+  https://github.com/connexta/gsr-yorktown/pulls*
+preset_exemption: GSR-0000, blocked, GSR-127
