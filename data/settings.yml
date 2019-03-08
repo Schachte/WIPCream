@@ -1,4 +1,4 @@
-pull_request_limit: '0'
+pull_request_limit: '44'
 comment_reply: >
   ## ⚠️ THIS PR HAS BEEN CLOSED  ⚠️
 
@@ -12,3 +12,4 @@ comment_reply: >
   *You can view open pull requests here:
   https://github.com/connexta/gsr-yorktown/pulls*
 preset_exemption: PRJ-99
+allowed_users: schachte

@@ -3,12 +3,9 @@ import SettingsBlock from "./SettingsBlock";
 import FluidForm from "./FluidForm";
 import Editor from "./Editor";
 
-const Configuration = () => {
+const Configuration = props => {
   return (
     <React.Fragment>
-      <div className="row">
-        <h1 className="ui huge header">Configuration</h1>
-      </div>
       <SettingsBlock
         header={"Settings"}
         tooltipTitle={"Settings Information"}
@@ -17,7 +14,7 @@ const Configuration = () => {
           Settings currently allow you to override the defaults in terms
           of allowing certain PRs through, modifying the limit, etc.
         `}
-        rowComponent={<FluidForm />}
+        rowComponent={<FluidForm auth={props.auth} />}
       />
       <SettingsBlock
         header={"Automatic Reply"}
@@ -28,7 +25,7 @@ const Configuration = () => {
           posted to the user before the pull-request is closed. This will
           make the user aware of why their pull request is being cancelled
         `}
-        rowComponent={<Editor />}
+        rowComponent={<Editor auth={props.auth} />}
       />
     </React.Fragment>
   );
