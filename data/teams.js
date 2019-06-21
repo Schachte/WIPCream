@@ -40,7 +40,7 @@ class Teams {
             "gjvera",
             "bennuttle",
             "leo-sakh",
-            "bernardIgiri",
+            "bernardigiri",
             "lavoywj"
           ],
           limit: 4
