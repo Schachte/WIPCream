@@ -32,7 +32,7 @@ class Teams {
             "nsuvarna",
             "gordocanchola"
           ],
-          limit: 4
+          limit: 1
         },
         scrumdog: {
           members: [
